@@ -44,12 +44,7 @@ public class AfishaManager {
     }
 
     public Movie[] findLast() {
-        int length;
-        if (movies.length < limit) {
-            length = movies.length;
-        } else {
-            length = limit;
-        }
+        int length = Math.min(movies.length, limit);
         Movie[] tmp = new Movie[length];
         for (int i = 0; i < tmp.length; i++) {
             tmp[i] = movies[movies.length - 1 - i];
