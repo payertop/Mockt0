@@ -25,20 +25,6 @@ public class AfishaManager {
         movies = tmp;
     }
 
-    public Movie[] showMovies() {
-        int resultLenght = limit;
-        if (movies.length < resultLenght) {
-            resultLenght = movies.length;
-        }
-        Movie[] result = new Movie[resultLenght];
-        for (int i = 0; i < resultLenght; i++) {
-            int cell = movies.length - i - 1;
-            result[i] = movies[cell];
-        }
-        return result;
-
-    }
-
     public Movie[] findAll() {
         return movies;
     }
